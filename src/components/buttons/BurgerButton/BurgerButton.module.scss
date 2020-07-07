@@ -1,0 +1,26 @@
+@import "../../../variables/variables";
+
+.container {
+  padding-top: 1px;
+  width: 100%;
+}
+
+.burgerButton {
+  @extend %default-button
+}
+
+.buttonOne {
+  width: 20px;
+  height: 3px;
+  background: #1b4a8a;
+  margin-bottom: 3px;
+}
+
+.buttonTwo {
+  composes : buttonOne;
+}
+
+.buttonThree {
+  composes: buttonOne;
+  margin-bottom: 0;
+}

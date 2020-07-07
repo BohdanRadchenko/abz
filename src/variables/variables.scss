@@ -1,0 +1,39 @@
+//COLORS
+$primary-color: rgb(239, 91, 76);
+$secondary-color: rgb(0, 123, 255);
+
+$bg-primary: #fff;
+$bg-secondary: #f9f9f3;
+
+//WIDTH
+$w-mobile-min: 360px;
+$w-mobile-max: 767px;
+$w-tablet-min: 768px;
+$w-tablet-max: 1023px;
+$w-desktop-min: 1024px;
+$w-desktop-max: 2560px;
+
+//CONTAINER
+$container-mobile : 91.7%;
+
+//DEFAULT
+%default-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+%default-button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: block;
+}
+
+%default-link {
+  text-decoration: none;
+}
+

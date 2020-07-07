@@ -1,0 +1,58 @@
+@import "../../variables/variables";
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.menu {
+  position: absolute;
+  width: 80.55%;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  overflow-y: scroll;
+  background-color: $bg-primary;
+
+  &__header {
+    padding-top: 11px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid #e1e1e1;
+
+    .logo {
+      padding-left: 5.16%;
+    }
+  }
+
+  .section {
+    @extend %default-list;
+    border-bottom: 1px solid #e1e1e1;
+    padding-left: 5.16%;
+    padding-top: 16px;
+    padding-bottom: 14px;
+
+    &__item {
+      width: 100%;
+      display: block;
+
+      &__button {
+        @extend %default-button;
+        text-align: left;
+        width: 100%;
+        font-size: 16px;
+        line-height: 24px;
+        padding: 9.5px 0;
+      }
+    }
+  }
+
+}
+

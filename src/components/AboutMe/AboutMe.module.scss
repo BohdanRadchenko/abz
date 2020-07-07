@@ -1,0 +1,54 @@
+@import "../../variables/variables";
+
+.section {
+  min-width: $w-mobile-min;
+  max-width: $w-mobile-max;
+  width: 100%;
+  display: block;
+  padding: 76px 0;
+}
+
+.container {
+  width: $container-mobile;
+  margin: 0 auto;
+}
+
+.title,
+.subtitle {
+  padding: 0;
+  font-weight: 400;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 33px;
+}
+
+.manImage {
+  display: block;
+  margin: 0 auto 36px auto;
+  background-image: url('../../assets/man-laptop-v1.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 290px;
+  height: 244px;
+}
+
+.subtitle {
+  font-size: 24px;
+  margin-bottom: 21px;
+}
+
+
+.text {
+  margin: 0 0 24px 0;
+  font-size: 16px;
+  line-height: 24px;
+  color: #4c4b4b;
+  word-spacing: -1px;
+  text-align: justify;
+
+  &:last-child {
+    margin: 0 0 32px 0;
+  }
+}

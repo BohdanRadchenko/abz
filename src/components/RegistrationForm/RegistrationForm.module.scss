@@ -1,0 +1,16 @@
+@import "../../variables/variables";
+
+.section {
+  min-width: $w-mobile-min;
+  max-width: $w-mobile-max;
+  width: 100%;
+  display: block;
+  background-color: $bg-primary;
+  padding-top: 76px;
+  padding-bottom: 94px;
+}
+
+.container {
+  width: $container-mobile;
+  margin: 0 auto;
+}

@@ -1,0 +1,32 @@
+@import "../../variables/variables";
+
+.section {
+  min-width: $w-mobile-min;
+  max-width: $w-mobile-max;
+  width: 100%;
+  display: block;
+  background-color: $bg-secondary;
+  padding-top: 76px;
+  padding-bottom: 94px;
+}
+
+.container {
+  width: $container-mobile;
+  margin: 0 auto;
+}
+
+.title,
+.attention {
+  margin: 0;
+  text-align: center;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.attention {
+  margin-bottom: 20px;
+}

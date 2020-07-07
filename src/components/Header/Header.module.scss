@@ -1,0 +1,26 @@
+@import '../../variables/variables';
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $bg-primary;
+  min-width: $w-mobile-min;
+  max-width: $w-mobile-max;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  padding-top: 11px;
+  padding-bottom: 9px;
+}
+
+.container {
+  width: $container-mobile;
+  margin: 0 auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -1,0 +1,47 @@
+@import "../../variables/variables";
+
+.section {
+  background-image: url("../../assets/banner-photo.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-width: $w-mobile-min;
+  max-width: $w-mobile-max;
+  width: 100%;
+  display: block;
+  margin-top: 40px;
+}
+
+.container {
+  padding-top: 71px;
+  padding-bottom: 74px;
+  width: $container-mobile;
+  margin: 0 auto;
+}
+
+.titleWrapper {
+  margin-bottom: 19px;
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 34px;
+}
+
+.subtitleWrapper {
+  margin-bottom: 24px;
+}
+
+.subtitle {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.title,
+.subtitle {
+  color: #ffffff;
+  text-align: center;
+  margin: 0;
+  font-weight: 400;
+}
