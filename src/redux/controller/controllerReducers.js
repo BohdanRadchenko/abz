@@ -14,6 +14,26 @@ const burgerMenuReducer = (state = false, {type, payload}) => {
   }
 };
 
+const totalPageReducer = (state = 1, { type, payload }) => {
+  switch (type) {
+    case ActionTypes.HANDLE_TOTAL_PAGE:
+      return payload.total_pages;
+    default:
+      return state;
+  }
+};
+
+const currentPageReducer = (state = 1, { type, payload }) => {
+  switch (type) {
+    case ActionTypes.HANDLE_CURRENT_PAGE:
+      return payload;
+    default:
+      return state;
+  }
+};
+
 export default combineReducers({
   burgerMenu: burgerMenuReducer,
+  totalPage : totalPageReducer,
+  currentPage : currentPageReducer
 });

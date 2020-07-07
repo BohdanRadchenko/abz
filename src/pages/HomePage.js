@@ -10,7 +10,7 @@ import Footer from "../components/Footer/Footer";
 
 const HomePage = () => {
     return (
-        <div style={{overflow: 'hidden'}}>
+        <>
             <BurgerMenu/>
             <Header/>
             <Banner/>
@@ -18,7 +18,7 @@ const HomePage = () => {
             <Users/>
             <RegistrationForm/>
             <Footer/>
-        </div>
+        </>
     )
 }
 export default HomePage

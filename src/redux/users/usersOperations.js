@@ -6,12 +6,14 @@ import {
     createUserRequest,
     createUserSuccess,
 } from './usersActions';
+import {handleTotalPage} from "../controller/controllerActions";
 
 export const handleUsers = credentials => dispatch => {
     dispatch(getUsersRequest());
     return api.users().all(credentials)
         .then(response => {
-            return dispatch(getUsersSuccess(response.data));
+            dispatch(getUsersSuccess(response.data));
+            dispatch(handleTotalPage(response.data));
         })
     .catch(error => dispatch(getUsersError(error)));
 };

@@ -1,10 +1,10 @@
 import {combineReducers} from 'redux';
 import {ActionTypes} from '../actionTypes';
 
-const usersReducer = (state = null, {type, payload}) => {
+const usersReducer = (state = [], {type, payload}) => {
   switch (type) {
     case ActionTypes.USERS_GET_SUCCESS:
-      return payload
+      return payload.users
 
     default:
       return state;

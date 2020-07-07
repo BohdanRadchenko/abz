@@ -6,6 +6,12 @@ export const ActionTypes = {
   //BURGER CLOSE
   BURGER_MENU_CLOSE : 'BURGER_MENU_CLOSE',
 
+  //CURRENT PAGE
+  HANDLE_CURRENT_PAGE : 'HANDLE_CURRENT_PAGE',
+  //TOTAL PAGE
+  HANDLE_TOTAL_PAGE : 'HANDLE_TOTAL_PAGE',
+
+
 
 
   // USERS ------------------------------
