@@ -4,7 +4,7 @@ import {
     getUsersSuccess,
     getUsersError,
     createUserRequest,
-    createUserSuccess,
+    createUserSuccess, createUserError,
 } from './usersActions';
 import {handleTotalPage} from "../controller/controllerActions";
 
@@ -18,11 +18,15 @@ export const handleUsers = credentials => dispatch => {
     .catch(error => dispatch(getUsersError(error)));
 };
 
-export const handleCreateUser = data => dispatch => {
+export const handleCreateUser = (data, token) => dispatch => {
     dispatch(createUserRequest());
-    return api.users().create(data)
+    return api.users().create(data, token)
         .then(response => {
-            return dispatch(createUserSuccess(response.data));
+            return api.users().all(1)
+                .then(response => {
+                    dispatch(createUserSuccess(response.data));
+                    dispatch(handleTotalPage(response.data));
+                })
         })
-    // .catch(error => dispatch(deleteUserError(error)));
+    .catch(error => dispatch(createUserError(error)));
 };

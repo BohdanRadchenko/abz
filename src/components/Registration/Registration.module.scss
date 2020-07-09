@@ -14,3 +14,23 @@
   width: $container-mobile;
   margin: 0 auto;
 }
+
+
+.title,
+.attention {
+  margin: 0;
+  text-align: center;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 30px;
+  margin-bottom: 19px;
+}
+
+.attention {
+  font-size: 16px;
+  line-height: 22px;
+  padding: 0 10px;
+  margin-bottom: 29px;
+}

@@ -13,6 +13,8 @@ if(screenWidth < 768) {
 
 const API_PATH = {
   USERS: '/users',
+  POSITIONS: '/positions',
+  TOKEN: '/token',
 }
 
 //API USERS
@@ -22,17 +24,25 @@ export const users = () => {
     return await axios.get(`${API_PATH.USERS}?page=${page}&count=${count}`)
   }
 
-  const create = async data => {
-    return await axios.post(API_PATH.USERS, data)
+  const create = async (data, token) => {
+    return await axios.post(API_PATH.USERS, data, {headers : {'Token': token}})
   }
 
-  const update = async (id, body) => {
-    return await axios.put(API_PATH.USER+ id, body)
-  }
-
-  const remove = async (id) => {
-    return await axios.delete(API_PATH.USER + id)
-  }
-
-  return {create, all, update, remove}
+  return {create, all}
 }
+
+//API CONTROLLER
+export const controller = () => {
+
+  const positions = async () => {
+    return await axios.get(`${API_PATH.POSITIONS}`)
+  }
+
+  const token = async () => {
+    return await axios.get(`${API_PATH.TOKEN}`)
+  }
+
+  return {positions, token}
+}
+
+

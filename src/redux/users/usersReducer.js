@@ -4,12 +4,16 @@ import {ActionTypes} from '../actionTypes';
 const usersReducer = (state = [], {type, payload}) => {
   switch (type) {
     case ActionTypes.USERS_GET_SUCCESS:
+      return [...state, ...payload.users]
+
+    case ActionTypes.USER_CREATE_SUCCESS:
       return payload.users
 
     default:
       return state;
   }
 };
+
 
 const loadingReducer = (state = false, {type, payload}) => {
   switch (type) {

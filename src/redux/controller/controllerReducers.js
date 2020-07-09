@@ -32,8 +32,31 @@ const currentPageReducer = (state = 1, { type, payload }) => {
   }
 };
 
+
+const positionReducer = (state = [], { type, payload }) => {
+  switch (type) {
+    case ActionTypes.POSITION_GET_SUCCESS:
+      return payload;
+
+    default:
+      return state;
+  }
+};
+
+const tokenReducer = (state = null, { type, payload }) => {
+  switch (type) {
+    case ActionTypes.TOKEN_GET_SUCCESS:
+      return payload;
+
+    default:
+      return state;
+  }
+};
+
 export default combineReducers({
   burgerMenu: burgerMenuReducer,
   totalPage : totalPageReducer,
-  currentPage : currentPageReducer
+  currentPage : currentPageReducer,
+  position : positionReducer,
+  token : tokenReducer
 });

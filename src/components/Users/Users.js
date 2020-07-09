@@ -1,24 +1,25 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import {connect} from 'react-redux'
 import {loading, users} from '../../redux/users/usersSelectors'
+import {totalPage} from '../../redux/controller/controllerSelectors'
 import {handleUsers} from '../../redux/users/usersOperations'
 import Actions from "../buttons/Actions/Actions";
 import UsersList from "./UsersList/UsersList";
 import css from './Users.module.scss'
 
-const Users = ({loading = false, users = [], getUsers}) => {
-
+const Users = ({loading = false, users = [], getUsers, totalPage}) => {
     const {Btn} = Actions()
+    const [pageCount, setPageCount] = useState(1)
 
     useEffect(() => {
-        getUsers(1)
-    }, [getUsers])
+        getUsers(pageCount)
+    }, [getUsers, pageCount])
 
     const handleMoreClick = e => {
-        console.log('handleMoreClick')
+        if (pageCount < totalPage) {
+            setPageCount(pageCount + 1)
+        }
     }
-
-    console.log(!!users.length)
 
     return (
         <section className={css.section}>
@@ -38,7 +39,8 @@ const Users = ({loading = false, users = [], getUsers}) => {
                     )}
                 </div>
 
-                <Btn onClick={handleMoreClick}>
+                <Btn event={handleMoreClick}
+                     disabled = {pageCount === totalPage}>
                     Show More
                 </Btn>
 
@@ -49,11 +51,12 @@ const Users = ({loading = false, users = [], getUsers}) => {
 
 const mSTP = state => ({
     users: users(state),
-    loading: loading(state)
+    loading: loading(state),
+    totalPage: totalPage(state)
 })
 
 const mDTP = {
-    getUsers: handleUsers
+    getUsers: handleUsers,
 }
 
 export default connect(mSTP, mDTP)(Users)

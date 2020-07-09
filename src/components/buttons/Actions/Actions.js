@@ -4,16 +4,21 @@ import css from './Actions.module.scss'
 
 const Actions = () => {
 
-    const Btn = ({children, scroll}) => {
+    const Btn = ({children, scroll, event, disabled}) => {
+
         return (
-            <div className={css.container}>
+            <div className={css.container} onClick={event ? event : null}>
                 {scroll && (
-                    <Link to="form" smooth={true} className={css.button}>
+                    <Link to="form" smooth={true}
+                          className={css.button}
+                    >
                         {children}
                     </Link>
                 )}
                 {!scroll && (
-                    <button className={css.button}>
+                    <button
+                        className={disabled ? css.button__disabled : css.button}
+                    >
                         {children}
                     </button>
                 )}

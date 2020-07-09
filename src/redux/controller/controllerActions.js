@@ -10,14 +10,39 @@ export const burgerMenuClose = () => ({
   type: ActionTypes.BURGER_MENU_CLOSE,
 })
 
-//CURRENT PAGE
-export const handleCurrentPage = page => ({
-  type: ActionTypes.HANDLE_CURRENT_PAGE,
-  payload : page
-});
-
 //TOTAL PAGE
 export const handleTotalPage = value => ({
   type: ActionTypes.HANDLE_TOTAL_PAGE,
   payload: value,
 })
+
+
+//POSITION GET
+export const positionGetRequest = () => ({
+  type: ActionTypes.POSITION_GET_REQUEST,
+});
+
+export const positionGetSuccess = response => ({
+  type: ActionTypes.POSITION_GET_SUCCESS,
+  payload: response,
+});
+
+export const positionGetError = error => ({
+  type: ActionTypes.POSITION_GET_ERROR,
+  payload: error,
+});
+
+//TOKEN GET
+export const tokenGetRequest = () => ({
+  type: ActionTypes.TOKEN_GET_REQUEST,
+});
+
+export const tokenGetSuccess = response => ({
+  type: ActionTypes.TOKEN_GET_SUCCESS,
+  payload: response,
+});
+
+export const tokenGetError = error => ({
+  type: ActionTypes.TOKEN_GET_ERROR,
+  payload: error,
+});
