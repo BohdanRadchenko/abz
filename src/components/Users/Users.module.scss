@@ -34,3 +34,27 @@
 .list {
   margin-bottom: 36px;
 }
+
+
+@media screen and (min-width: 768px) {
+  .section {
+    min-width: $w-tablet-min;
+    max-width: $w-tablet-max;
+    padding-top: 113px;
+    padding-bottom: 124px;
+  }
+
+  .container {
+    width: $container-tablet;
+  }
+
+  .title {
+    font-size: 40px;
+    line-height: 44px;
+    margin-bottom: 21px;
+  }
+
+  .attention {
+    margin-bottom: 80px;
+  }
+}

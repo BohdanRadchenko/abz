@@ -3,7 +3,7 @@
 .section {
   background-image: url("../../assets/banner-photo.jpg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
   background-size: cover;
   min-width: $w-mobile-min;
   max-width: $w-mobile-max;
@@ -20,6 +20,7 @@
 }
 
 .titleWrapper {
+  width: 100%;
   margin-bottom: 19px;
 }
 
@@ -44,4 +45,38 @@
   text-align: center;
   margin: 0;
   font-weight: 400;
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    min-width: $w-tablet-min;
+    max-width: $w-tablet-max;
+    margin-top: 60px;
+  }
+
+  .container {
+    padding-top: 59px;
+    padding-bottom: 65px;
+    width: $container-tablet;
+  }
+
+  .titleWrapper {
+    width: 416px;
+    margin-bottom: 28px;
+  }
+  
+  .title {
+    text-align: left;
+    font-size: 40px;
+    line-height: 44px;
+  }
+  
+  .subtitleWrapper {
+    width: 450px;
+    margin-bottom: 34px;
+  }
+  
+  .subtitle {
+    text-align: left;
+  }
 }

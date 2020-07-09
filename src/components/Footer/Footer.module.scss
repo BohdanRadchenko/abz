@@ -25,3 +25,18 @@
     margin-right: 4px;
   }
 }
+
+@media screen and (min-width : 768px) {
+  .footer {
+    min-width: $w-tablet-min;
+    max-width: $w-tablet-max;
+  }
+}
+
+
+@media screen and (min-width : 768px) {
+  .footer {
+    min-width: $w-desktop-min;
+    max-width: $w-desktop-max;
+  }
+}

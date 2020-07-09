@@ -24,3 +24,57 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.menu {
+  @extend %default-list;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    min-width: $w-tablet-min;
+    max-width: $w-tablet-max;
+    padding: 20px 0;
+  }
+
+  .container {
+    width: $container-tablet;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    min-width: $w-desktop-min;
+    max-width: $w-desktop-max;
+  }
+
+  .container {
+    width: $container-desktop;
+    max-width: $container-max;
+  }
+
+  .nav {
+    justify-content: space-between;
+  }
+
+  .burgerButton {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+
+    &__item {
+      margin-right: 29px;
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &__link {
+        font-size: 14px;
+      }
+    }
+
+  }
+}

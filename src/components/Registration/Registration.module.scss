@@ -34,3 +34,36 @@
   padding: 0 10px;
   margin-bottom: 29px;
 }
+
+
+@media screen and (min-width: 768px) {
+  .section {
+    min-width: $w-tablet-min;
+    max-width: $w-tablet-max;
+    padding-top: 109px;
+    padding-bottom: 111px;
+  }
+
+  .container {
+    width: $container-tablet;
+  }
+
+  .textWrapper {
+    padding-left: 10px;
+    width: 480px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 29px;
+  }
+
+  .title {
+    font-size: 40px;
+    line-height: 44px;
+    margin-bottom: 19px;
+  }
+
+  .attention {
+    padding-left: 9px;
+    margin-bottom: 0;
+  }
+}

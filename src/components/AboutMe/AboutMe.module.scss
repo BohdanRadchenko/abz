@@ -52,3 +52,48 @@
     margin: 0 0 32px 0;
   }
 }
+
+
+@media screen and (min-width: 768px) {
+  .section {
+    min-width: $w-tablet-min;
+    max-width: $w-tablet-max;
+    padding-top: 54px;
+    padding-bottom: 52px;
+  }
+
+  .container {
+    padding-top: 59px;
+    padding-bottom: 65px;
+    width: $container-tablet;
+  }
+
+  .title {
+    font-size: 40px;
+    line-height: 44px;
+    margin-bottom: 68px;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .leftSide {
+    padding-top: 4px;
+    width: 34.74%;
+  }
+
+  .manImage {
+    width: 246px;
+    height: 208px;
+  }
+
+  .rightSide {
+    width: 60.73%;
+  }
+  
+  .subtitle {
+    text-align: left;
+  }
+}

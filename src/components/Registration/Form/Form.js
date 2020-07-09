@@ -29,7 +29,6 @@ const Form = ({positions, token, handleCreateUser}) => {
         e.preventDefault();
         const data = createFormData(form);
         handleCreateUser(data, token);
-        // fetchUsers(page); --------
         setForm(defaultForm);
     };
 
@@ -83,7 +82,7 @@ const Form = ({positions, token, handleCreateUser}) => {
                 </label>
 
                 {!!positions.length && (
-                    <div className="radio">
+                    <div className={css.radio}>
                         <p className={css.positionTitle}>
                             Select your position
                         </p>

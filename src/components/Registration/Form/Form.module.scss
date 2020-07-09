@@ -46,11 +46,11 @@
     border-radius: 4px;
     box-shadow: 0 0 3pt 2pt #e6f2ff;
 
-    //.input:focus + .labelValid {
     & + .labelValid {
       opacity: 1;
     }
   }
+
 
   &:invalid:not(:focus):not(:placeholder-shown) {
     border: 1px solid #dc3545;
@@ -78,6 +78,7 @@
     opacity: 0;
   }
 }
+
 
 /* RADIO BUTTON */
 .positionTitle {
@@ -118,11 +119,12 @@
   margin-right: 10px;
   position: relative;
   top: 2px;
+
+  &:checked {
+    border: 4px solid #007bff;
+  }
 }
 
-.radioInput:checked {
-  border: 4px solid #007bff;
-}
 
 /*FILE INPUT*/
 .inputfile {
@@ -188,4 +190,33 @@
   &:hover {
     background-color: #d24335;
   }
+}
+
+@media screen and (min-width: 768px) {
+  .form {
+    width: 65%;
+    margin: 0 auto;
+  }
+
+  .input {
+    width: 102%;
+  }
+
+  .radio {
+    margin-bottom: 47px;
+  }
+
+  .positionTitle {
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+
+  .radioItem {
+    margin-bottom: 6px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
 }

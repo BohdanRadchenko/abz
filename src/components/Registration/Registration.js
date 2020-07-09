@@ -12,19 +12,24 @@ const Registration = ({getPositions, positions, token, getToken}) => {
     useEffect(() => {
         getPositions()
         getToken()
-    }, [ getPositions, getToken])
+    }, [getPositions, getToken])
 
     return (
         <Element name="form" className="element">
             <section className={css.section}>
                 <div className={css.container}>
-                    <h1 className={css.title}>
-                        Register to get a work
-                    </h1>
-                    <p className={css.attention}>
-                        Attention! After successful registration and alert, update the list of users in the block from
-                        the top
-                    </p>
+
+                    <div className={css.textWrapper}>
+                        <h1 className={css.title}>
+                            Register to get a work
+                        </h1>
+                        <p className={css.attention}>
+                            Attention! After successful registration and alert, update the list of users in the block
+                            from
+                            the top
+                        </p>
+                    </div>
+
 
                     {positions && !!positions.length && (
                         <Form
@@ -40,12 +45,12 @@ const Registration = ({getPositions, positions, token, getToken}) => {
 
 const mSTP = state => ({
     positions: positions(state),
-    token : token(state)
+    token: token(state)
 })
 
 const mDTP = {
     getPositions: handlePositions,
-    getToken : handleToken
+    getToken: handleToken
 }
 
 

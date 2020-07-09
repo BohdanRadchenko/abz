@@ -4,13 +4,14 @@ import css from './Actions.module.scss'
 
 const Actions = () => {
 
-    const Btn = ({children, scroll, event, disabled}) => {
+    const Btn = ({children, scroll, event, disabled, styled}) => {
 
         return (
             <div className={css.container} onClick={event ? event : null}>
                 {scroll && (
                     <Link to="form" smooth={true}
                           className={css.button}
+                          style={styled}
                     >
                         {children}
                     </Link>
@@ -26,10 +27,12 @@ const Actions = () => {
         )
     }
 
-    const Lnk = ({children}) => {
+    const Lnk = ({children, styled}) => {
         return (
             <div className={css.container}>
-                <button className={css.link}>
+                <button
+                    style={styled}
+                    className={css.link}>
                     <Link to="form" smooth={true} className={css.btnLink}>
                         {children}
                     </Link>
