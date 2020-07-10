@@ -41,10 +41,12 @@ const Users = ({loading = false, users = [], getUsers, totalPage}) => {
                         )}
                     </div>
 
-                    <Btn event={handleMoreClick}
-                         disabled={pageCount === totalPage}>
-                        Show More
-                    </Btn>
+					{pageCount < totalPage && (
+						<Btn event={handleMoreClick}
+							disabled={pageCount === totalPage}>
+							Show More
+						</Btn>
+					)}
 
                 </div>
             </section>
