@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import {loading, users} from '../../redux/users/usersSelectors'
 import {totalPage} from '../../redux/controller/controllerSelectors'
 import {handleUsers} from '../../redux/users/usersOperations'
+import {Element} from 'react-scroll'
 import Actions from "../buttons/Actions/Actions";
 import UsersList from "./UsersList/UsersList";
 import css from './Users.module.scss'
@@ -22,30 +23,33 @@ const Users = ({loading = false, users = [], getUsers, totalPage}) => {
     }
 
     return (
-        <section className={css.section}>
-            <div className={css.container}>
+        <Element name="users">
+            <section className={css.section}>
+                <div className={css.container}>
 
-                <h1 className={css.title}>
-                    Our cheerful users
-                </h1>
+                    <h1 className={css.title}>
+                        Our cheerful users
+                    </h1>
 
-                <p className={css.attention}>
-                    Attention! Sorting users by registration date
-                </p>
+                    <p className={css.attention}>
+                        Attention! Sorting users by registration date
+                    </p>
 
-                <div className={css.list}>
-                    {!!users.length && (
-                        <UsersList loading={loading} users={users}/>
-                    )}
+                    <div className={css.list}>
+                        {!!users.length && (
+                            <UsersList loading={loading} users={users}/>
+                        )}
+                    </div>
+
+                    <Btn event={handleMoreClick}
+                         disabled={pageCount === totalPage}>
+                        Show More
+                    </Btn>
+
                 </div>
+            </section>
+        </Element>
 
-                <Btn event={handleMoreClick}
-                     disabled = {pageCount === totalPage}>
-                    Show More
-                </Btn>
-
-            </div>
-        </section>
     )
 }
 

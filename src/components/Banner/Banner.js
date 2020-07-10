@@ -26,7 +26,7 @@ const Banner = () => {
                             repository.
                         </p>
                     )}
-                    {screenWidth < 1024 && (
+                    {screenWidth >= 768 && (
                         <p className={css.subtitle}>
                             We kindly remind you that your test assignment should be submitted as a link to
                             github/bitbucket repository. Please be patient, we consider and respond to every application
@@ -37,7 +37,7 @@ const Banner = () => {
 
                 </div>
 
-                <Btn scroll styled={{margin : 0}}>
+                <Btn scroll styled={screenWidth >= 768 ? {margin : 0} : null}>
                     Sign up now
                 </Btn>
 

@@ -20,16 +20,39 @@
 .position,
 .email,
 .phone {
+  color: #4c4b4b;
   margin: 0;
   text-align: center;
+  cursor: default;
 }
 
 .name {
-  font-size: 16px;
+  color: #060607;
+  font-size: 20px;
   margin-bottom: 14px;
 }
 
 .position,
 .email {
   margin-bottom: 10px;
+}
+
+.email {
+  position: relative;
+
+  &:hover .toolTips {
+    display: block;
+  }
+}
+
+.toolTips {
+  @extend %tooltip;
+  display: none;
+}
+
+
+@media screen and (min-width: 1024px) {
+  .name {
+    font-size: 24px;
+  }
 }

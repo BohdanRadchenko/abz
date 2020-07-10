@@ -15,7 +15,7 @@ const Registration = ({getPositions, positions, token, getToken}) => {
     }, [getPositions, getToken])
 
     return (
-        <Element name="form" className="element">
+        <Element name="form">
             <section className={css.section}>
                 <div className={css.container}>
 

@@ -6,15 +6,15 @@
 
 .list {
   @extend %default-list;
-  margin-bottom: 40px;
+  width: 100%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
 
   &__item {
-    width: 216px;
+    width: 200px;
 
     &:nth-last-child(n + 4) {
       margin-bottom: 58px;
@@ -26,3 +26,26 @@
   }
 
 }
+
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 89%;
+    margin: 0 auto;
+    max-width: $container-max;
+  }
+
+  .list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .list {
+    margin-bottom: 40px;
+    max-width: 799px;
+  }
+}
+

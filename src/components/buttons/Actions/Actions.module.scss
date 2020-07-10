@@ -16,6 +16,10 @@
   border-radius: 4px;
   font-weight: 600;
 
+  &:hover {
+    background-color: $hover-primary;
+  }
+
   &__disabled {
     composes: button;
     background-color: #d7d7d7;
@@ -30,4 +34,8 @@
   font-size: 16px;
   color: $primary-color;
   font-weight: 600;
+
+  &:hover {
+    color: $hover-primary;
+  }
 }

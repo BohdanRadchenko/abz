@@ -5,6 +5,11 @@ $secondary-color: rgb(0, 123, 255);
 $bg-primary: #fff;
 $bg-secondary: #f9f9f3;
 
+$hover-primary: #d24335;
+$hover-secondary: #f9f9f3;
+
+$active-primary: #1b4a8a;
+
 //WIDTH
 $w-mobile-min: 360px;
 $w-mobile-max: 767px;
@@ -38,5 +43,17 @@ $container-max : 1170px;
 
 %default-link {
   text-decoration: none;
+}
+
+%tooltip {
+  position: absolute;
+  bottom: -160%;
+  left: 20%;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 14px;
+  color: #ffffff;
+  background: #333;
+  padding: 4px 6px;
 }
 

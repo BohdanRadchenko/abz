@@ -97,3 +97,51 @@
     text-align: left;
   }
 }
+
+
+@media screen and (min-width: 1024px) {
+  .section {
+    min-width: $w-desktop-min;
+    max-width: $w-desktop-max;
+    padding-top: 54px;
+    padding-bottom: 52px;
+  }
+
+  .container {
+    padding-top: 97px;
+    padding-bottom: 65px;
+    width: $container-desktop;
+    max-width: $container-max;
+  }
+
+  .title {
+    font-size: 48px;
+    line-height: 55px;
+    margin-bottom: 68px;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .leftSide {
+    padding-top: 4px;
+    padding-left: 25px;
+    width: 34.74%;
+  }
+
+  .manImage {
+    width: 338px;
+    height: 285px;
+  }
+
+  .rightSide {
+    padding-left: 36px;
+    width: 60.73%;
+  }
+
+  .subtitle {
+    text-align: left;
+  }
+}

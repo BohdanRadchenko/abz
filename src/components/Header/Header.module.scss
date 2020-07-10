@@ -4,6 +4,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 999;
   background-color: $bg-primary;
   min-width: $w-mobile-min;
   max-width: $w-mobile-max;
@@ -23,6 +24,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+
+  &__logo {
+    cursor: pointer;
+  }
 }
 
 .menu {
@@ -66,15 +72,26 @@
     flex-direction: row;
 
     &__item {
+      cursor: pointer;
       margin-right: 29px;
+
+
       &:last-child {
         margin-right: 0;
       }
 
       &__link {
+        color: #212529;
         font-size: 14px;
+
+        &:hover  {
+          color: $hover-primary;
+        }
+
+        &__active {
+          color: $active-primary;
+        }
       }
     }
-
   }
 }

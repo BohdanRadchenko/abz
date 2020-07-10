@@ -220,3 +220,33 @@
   }
 
 }
+
+
+@media screen and (min-width: 1024px) {
+  .form {
+    width: 468px;
+    margin: 0 auto;
+  }
+
+  .input {
+    width: 100%;
+  }
+
+  .radio {
+    margin-bottom: 47px;
+  }
+
+  .positionTitle {
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+
+  .radioItem {
+    margin-bottom: 6px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+}

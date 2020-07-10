@@ -58,3 +58,27 @@
     margin-bottom: 80px;
   }
 }
+
+@media screen and (min-width: 1024px) {
+  .section {
+    min-width: $w-desktop-min;
+    max-width: $w-desktop-max;
+    padding-top: 156px;
+    padding-bottom: 124px;
+  }
+
+  .container {
+    width: $container-desktop;
+    max-width: $container-max;
+  }
+
+  .title {
+    font-size: 49px;
+    line-height: 55px;
+    margin-bottom: 21px;
+  }
+
+  .attention {
+    margin-bottom: 80px;
+  }
+}

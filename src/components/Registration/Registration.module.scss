@@ -67,3 +67,38 @@
     margin-bottom: 0;
   }
 }
+
+@media screen and (min-width: 1024px) {
+  .section {
+    min-width: $w-desktop-min;
+    max-width: $w-desktop-max;
+    padding-top: 147px;
+    padding-bottom: 155px;
+  }
+
+  .container {
+    width: $container-desktop;
+    max-width: $container-max;
+  }
+
+  .textWrapper {
+    padding-left: 0;
+    width: 528px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 29px;
+  }
+
+  .title {
+    font-size: 50px;
+    line-height: 55px;
+    margin-bottom: 19px;
+  }
+
+  .attention {
+    width: 468px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+  }
+}
