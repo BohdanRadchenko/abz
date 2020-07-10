@@ -1,5 +1,5 @@
 import React, {Suspense} from 'react';
-import {BrowserRouter as Router} from 'react-router-dom'
+import {HashRouter as Router} from 'react-router-dom'
 import {Loaders} from "./Loaders/Loaders"
 import {useRoutes} from "../routes";
 
@@ -8,8 +8,7 @@ const App = () => {
 
   return (
       <Suspense fallback={<Loaders/>}>
-        {/*<Router basename='/'>*/}
-        <Router>
+        <Router basename='/'>
           {routes}
         </Router>
       </Suspense>

@@ -12,6 +12,12 @@
   margin-top: 40px;
 }
 
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .section {
+    background-image: url('../../assets/mobile_bunner@2x-min.png');
+  }
+}
+
 .container {
   padding-top: 71px;
   padding-bottom: 74px;
