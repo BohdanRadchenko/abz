@@ -10,6 +10,16 @@ export const burgerMenuClose = () => ({
   type: ActionTypes.BURGER_MENU_CLOSE,
 })
 
+//SUCCESS MODAL OPEN
+export const successModalOpen = () => ({
+  type: ActionTypes.SUCCESS_MODAL_OPEN,
+})
+
+//SUCCESS MODAL CLOSE
+export const successModalClose = () => ({
+  type: ActionTypes.SUCCESS_MODAL_CLOSE,
+})
+
 //TOTAL PAGE
 export const handleTotalPage = value => ({
   type: ActionTypes.HANDLE_TOTAL_PAGE,

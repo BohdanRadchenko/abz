@@ -1,0 +1,83 @@
+@import "../../../variables/variables";
+
+.modal {
+  display: block;
+  background-color: $bg-primary;
+  border-radius: 5px;
+  border: 1px solid #666666;
+  width: 394px;
+}
+
+.container {
+  width: 362px;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 16px 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eceef1;
+  align-items: center;
+  flex-direction: row;
+
+  &__title {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  &__button {
+    @extend %default-button;
+    position: relative;
+    width: 12px;
+    height: 12px;
+    display: block;
+
+    &__one {
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform-origin: center;
+      transform: translate(-50%, -50%) rotate(-45deg);
+      border: 1px solid #7b7b7b;
+    }
+
+    &__two {
+      composes: header__button__one;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+  }
+}
+
+.main {
+  padding: 17px 0;
+  border-bottom: 1px solid #eceef1;
+
+  &__desc {
+    margin: 0;
+    font-size: 16px;
+    line-height: 24px;
+    color: #4c4b4b;
+  }
+}
+
+.footer {
+  padding: 16px;
+  display: flex;
+  justify-content: flex-end;
+
+  &__button {
+    @extend %default-button;
+    width: 80px;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: $primary-color;
+    color: #ffffff;
+    font-size: 16px;
+    margin: 0;
+  }
+}

@@ -14,6 +14,19 @@ const burgerMenuReducer = (state = false, {type, payload}) => {
   }
 };
 
+const successModalReducer = (state = false, {type, payload}) => {
+  switch (type) {
+    case ActionTypes.SUCCESS_MODAL_OPEN:
+      return true;
+
+    case ActionTypes.SUCCESS_MODAL_CLOSE:
+      return false;
+
+    default:
+      return state;
+  }
+};
+
 const totalPageReducer = (state = 1, { type, payload }) => {
   switch (type) {
     case ActionTypes.HANDLE_TOTAL_PAGE:
@@ -55,6 +68,7 @@ const tokenReducer = (state = null, { type, payload }) => {
 
 export default combineReducers({
   burgerMenu: burgerMenuReducer,
+  modal : successModalReducer,
   totalPage : totalPageReducer,
   currentPage : currentPageReducer,
   position : positionReducer,

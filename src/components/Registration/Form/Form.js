@@ -1,10 +1,12 @@
 import React, {useState} from "react";
 import {connect} from 'react-redux'
 import {handleCreateUser} from '../../../redux/users/usersOperations'
+import {successModalOpen} from '../../../redux/controller/controllerActions'
 import {createFormData} from '../../../helpers/formData.helpers';
 import css from './Form.module.scss'
 
-const Form = ({positions, token, handleCreateUser}) => {
+const Form = ({positions, token, handleCreateUser, openModalSuccess}) => {
+    const screenWidth = document.documentElement.clientWidth;
 
     const defaultForm = {
         name: '', email: '', phone: '', positions_id: 1, photo: ''
@@ -29,6 +31,9 @@ const Form = ({positions, token, handleCreateUser}) => {
         e.preventDefault();
         const data = createFormData(form);
         handleCreateUser(data, token);
+        if(screenWidth >= 1024) {
+            openModalSuccess()
+        }
         setForm(defaultForm);
     };
 
@@ -134,7 +139,8 @@ const Form = ({positions, token, handleCreateUser}) => {
 }
 
 const mDTP = {
-    handleCreateUser : handleCreateUser
+    handleCreateUser: handleCreateUser,
+    openModalSuccess: successModalOpen
 }
 
-export default connect (null, mDTP)(Form)
+export default connect(null, mDTP)(Form)

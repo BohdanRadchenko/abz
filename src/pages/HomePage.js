@@ -1,4 +1,6 @@
 import React from 'react'
+import Modal from "../components/Modal/Modal";
+import SuccessModal from "../components/Modal/SuccessModal/SuccessModal";
 import BurgerMenu from "../components/BurgerMenu/BurgerMenu";
 import Header from "../components/Header/Header";
 import Banner from "../components/Banner/Banner";
@@ -11,6 +13,9 @@ import Footer from "../components/Footer/Footer";
 const HomePage = () => {
     return (
         <>
+            <Modal>
+                <SuccessModal/>
+            </Modal>
             <BurgerMenu/>
             <Header/>
             <Banner/>
